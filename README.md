@@ -22,8 +22,8 @@ If `asyncBindable` is used along with `computedFrom`, the `computedFrom` depende
 ### Implications
 There are some important implications you should take away:
 1. `asyncBindable` by default will only make a call to the getter that you declared **once**. It does not magically know when to call your getter again.
-   You need to tell it when to reevaluate the getter (see [this section](https://github.com/israu2/aurelia-async-bindable/README.md#manually-refreshing-dependent-bindings)). 
-2. Because `asyncBindable` is using `computedFrom` internally, it is only natural that you can use them together (see [this section](https://github.com/israu2/aurelia-async-bindable/README.md#using-along-with-the-computedFrom-decorator))
+   You need to tell it when to reevaluate the getter (see [this section](https://github.com/istrau2/aurelia-async-bindable-bluebird#manually-refreshing-dependent-bindings)). 
+2. Because `asyncBindable` is using `computedFrom` internally, it is only natural that you can use them together (see [this section](https://github.com/istrau2/aurelia-async-bindable-bluebird#using-along-with-the-computedfrom-decorator))
    However, when using them together, **order is important**, the `asyncBindable` decorator must be declared first.
 3. Don't worry about dirty checking. Generally, when you bind to a regular getter, aurelia will have to resort to dirty checking to update the binding (because it has no way of knowing which properties to observe for the update).
    However, because `asyncBindable` is using `computedFrom` internally, that automatically means that Aurelia will NOT use dirty checking to update any dependent bindings.

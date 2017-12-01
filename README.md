@@ -1,7 +1,7 @@
 # aurelia-async-bindable
 
 ## How It Works (This Is IMPORTANT)
-READMEs don't ususally begin with this kind of information. However, with `asyncBindable`, understanding how it works is really important.
+READMEs don't usually begin with this kind of information. However, with `asyncBindable`, understanding how it works is really important.
 If you use it incorrectly, you may have interesting things happen to you!
 
 `asyncBindable` is a powerful decorator that can be used to bind asynchronous getters to your aurelia views.
@@ -9,8 +9,8 @@ It should be used along with a getter on your view model that returns a promise.
 
 Internally, the decorator does two things:
 1. It transforms your getter:
-    a. It memoizes the return value (based on the dependencies - more on this later)
-    b. Wraps your getter in a function that returns appropriate values depending on the state of the promise returned by your getter.
+    * It memoizes the return value (based on the dependencies - more on this later)
+    * Wraps your getter in a function that returns appropriate values depending on the state of the promise returned by your getter.
 2. It sets up an additional property on your view model and tells `@computedFrom` to watch that property.
 
 When your promise resolves, `asyncBindable` changes the property that `@computedFrom` is watching and retriggers any dependant bindings.

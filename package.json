@@ -87,6 +87,6 @@
         "wait-on": "2.0.2"
     },
     "dependencies": {
-        "lodash.get": "^4.4.2"
+        "lodash": "^4.17.4"
     }
 }

@@ -2,7 +2,7 @@
  * Created by istrauss on 8/30/2017.
  */
 
-import _get from 'lodash.get';
+import _get from 'lodash/get';
 
 const defaultOptions = {
     pendWith: undefined,

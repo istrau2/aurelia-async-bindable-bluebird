@@ -1,4 +1,4 @@
-# aurelia-async-bindable
+# aurelia-async-bindable-bluebird
 
 ## How It Works (This Is IMPORTANT)
 READMEs don't usually begin with this kind of information. However, with `asyncBindable`, understanding how it works is really important.
